@@ -1,0 +1,44 @@
+<apex:page standardcontroller="Candidate__c" showHeader="false" extensions="LoginPage" >
+     <body width="1222px" Length="100px"/>
+     <!-- Javascript -->
+    <script type="text/javascript">
+     
+
+    function validate()
+    {
+        if(document.getElementById('{!$Component.frm.pb.pbs.pbsi1.nam}').value == '')
+        {
+            alert("User name is mandatory");
+        }
+        if(document.getElementById('{!$Component.frm.pb.pbs.pbsi2.pid}').value == '')
+        {
+            alert("Password id is mandatory");
+        }
+        else
+        {
+            callSubmt();
+            alert("Account has been inserted");
+        }
+    }
+    </script>
+<!-- Javascript -->
+<apex:form >
+    <apex:sectionHeader title="Candidate Login page"/>
+    <apex:pageBlock title="Please LoginHere" tabStyle="Candidate__c">
+    
+        <apex:pageBlockSection >
+          <apex:inputText required="true" id="username" value="{!Candidate__c.Username__c}"/>
+          <apex:inputText required="true" id="Password" value="{!Candidate__c.Password__c}"/>
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockButtons location="Bottom" >
+            <apex:commandButton value="Login" action="{!Save}"/>
+            <apex:commandButton value="Forgot Password" />
+            <apex:commandButton value="Signup"/>
+            
+        </apex:pageBlockButtons>
+        
+    </apex:pageBlock>
+</apeX:form>
+ 
+</apex:page>

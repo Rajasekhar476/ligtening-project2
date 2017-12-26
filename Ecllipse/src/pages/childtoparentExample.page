@@ -1,0 +1,14 @@
+<apex:page controller="childtoparentExample9">
+<apex:form >
+<apex:pageBlock rendered="{!not(ISNULL(con))}">
+
+    <apex:pageblockTable value="{!Con}" var="c" >
+        <apex:column value="{!c.Name}"/>
+        <apex:column value="{!c.Account.Name}"/>
+        <apex:column value="{!c.Account.Industry}"/>
+    </apex:pageblockTable>
+    
+    <apex:commandButton value="click" action="{!show}"/>
+</apex:pageBlock>
+</apex:form> 
+</apex:page>

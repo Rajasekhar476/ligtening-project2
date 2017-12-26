@@ -1,0 +1,10 @@
+<apex:page controller="ArrayExample">
+ <apex:form > 
+     <apex:pageBlock title="ARRAY LIST OF NAMES">
+     <apex:pageBlockTable value="{!myval}" var="a">
+     <apex:column value="{!a}"/>
+     <apex:outputLabel >{!name}</apex:outputLabel>
+     </apex:pageBlockTable>
+     </apex:pageBlock>
+ </apex:form>
+</apex:page>

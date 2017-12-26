@@ -1,0 +1,9 @@
+<apex:page standardController="Account" recordSetVar="items">
+<apex:form >
+<apex:dataList value="{!items}" var="a" type="Square">
+<apex:outputText value="{!a.Name}"/>
+</apex:dataList>
+
+</apex:form>
+  
+</apex:page>

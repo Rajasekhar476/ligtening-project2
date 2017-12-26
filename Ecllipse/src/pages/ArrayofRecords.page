@@ -1,0 +1,18 @@
+<apex:page controller="ArrauofRecordsExample">
+<apex:form >
+<apex:selectList size="1"> 
+<apex:outputLabel >PLease Select Accounts</apex:outputLabel><br/>
+<apex:selectOption itemLabel="SFDC" itemValue="one"></apex:selectOption>
+<apex:selectOption itemLabel="JAVA" itemValue="TWO"></apex:selectOption>
+</apex:selectList>
+<apex:pageblock >
+<apex:pageBlockTable value="{!myval}" var="a">
+<apex:column value="{!a.Name}"/>
+<apex:column value="{!a.industry}"/>
+</apex:pageBlockTable>
+</apex:pageblock>
+
+</apex:form>
+ 
+ 
+</apex:page>

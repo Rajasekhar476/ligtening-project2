@@ -1,0 +1,17 @@
+<apex:page controller="AdditionAndSubtrationAPEXCLASS">
+<apex:form >
+<apex:pageBlock title="Sample OPerations"> 
+<apex:pageBlockSection title="Your Data">
+    <apex:pageBlockSectionItem >
+        <apex:outputText >Enter A value</apex:outputText>
+        <apex:inputText value="{!avalue}"/>
+    </apex:pageBlockSectionItem>
+    <apex:pageBlockSectionItem >
+        <apex:outputText >Enter B value</apex:outputText>
+        <apex:inputText value="{!bvalue}"/>
+    </apex:pageBlockSectionItem>
+    <apex:outputLabel value=" your Avalue {!avalue} Bvalueis{!bvalue} and RESULT is{!result}"></apex:outputLabel>
+</apex:pageBLockSection>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

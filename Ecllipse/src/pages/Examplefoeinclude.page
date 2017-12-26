@@ -1,0 +1,12 @@
+<apex:page standardController="Account" recordSetVar="items">
+  
+      <apex:sectionHeader title="Account" subtitle="Home" />
+      <apex:pageBlock id="a">
+          <apex:pageBlockSection title="Recent Account" >
+          <apex:pageBlockTable value="{!items}" var="a">
+              <apex:column value="{!a.Name}" />
+          </apex:pageBlockTable>
+          </apex:pageBlockSection>
+                    
+      </apex:pageBlock>
+  </apex:page>

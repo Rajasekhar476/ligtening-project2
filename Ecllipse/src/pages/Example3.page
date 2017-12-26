@@ -1,0 +1,5 @@
+<apex:page >
+  <apex:form >
+      <apex:iframe src="https://c.ap2.visual.force.com/apex/Exapmeforinclude2"/>
+  </apex:form>
+</apex:page>

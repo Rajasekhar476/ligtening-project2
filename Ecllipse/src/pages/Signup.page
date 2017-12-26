@@ -1,0 +1,21 @@
+<apex:page standardController="Candidate__c" showHeader="False" extensions="Login"  >    
+    <apex:form >
+     <apex:sectionHeader title="Please Signup Here"/>
+     <apex:pageBlock >
+         <apex:pageBlockSection columns="1">
+             <apex:inputField value="{!Candidate__c.First_Name__c}"/>
+             <apex:inputField value="{!Candidate__c.Last_Name__c}"/>
+             <apex:inputField value="{!Candidate__c.Email__c}"/>
+             <apex:inputField value="{!Candidate__c.Phone__c}"/>
+             <apex:inputField value="{!Candidate__c.Country__c}"/>
+             <apeX:inputField value="{!Candidate__c.Username__c}"/>
+             <apex:inputField value="{!Candidate__c.Password__c}"/>
+             <apex:inputField value="{!Candidate__c.Confirm_Password__c}"/>
+         </apex:pageBlockSection>
+         <apex:pageBlockButtons location="bottom">
+             <apex:commandButton value="Signup" action="{!quicksave}"/>
+             <apex:commandButton value="Login" action="{!Login}"/>
+         </apex:pageBlockButtons>
+     </apex:pageBlock>
+    </apex:form>
+</apex:page>

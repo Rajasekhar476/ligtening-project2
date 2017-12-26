@@ -1,0 +1,19 @@
+<apex:page standardController="Position__c">
+<apex:form >
+<apex:outputLabel value="{!$User.FirstName} "/>
+<apex:sectionHeader title="Positions" subtitle="Home"/>
+<apex:pageBlock title="PositionsEdit">
+<apex:pageblockSection title="Description"/>
+<apex:outputLabel >EnterName</apex:outputLabel>
+<apex:inputText tabindex="2"/>
+<br/>
+
+<apex:outputLabel >Enter Password</apex:outputLabel>
+<apex:inputsecret tabindex="1"/><br/>
+<apex:outputLabel >EnterAddress</apex:outputLabel>
+<apex:inputTextarea />
+
+</apex:pageBlock>
+</apex:form>
+ 
+</apex:page>

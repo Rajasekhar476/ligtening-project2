@@ -1,0 +1,22 @@
+<apex:page standardController="Position__c" showHeader="false"  recordSetVar="positions" extensions="SearchController">
+<apex:form >
+     <!--<apex:panelGroup >-->
+                                <!--</apex:panelGroup>-->         
+<apex:sectionHeader title="WELCOME TO LIST PAGE"/>
+   <apex:pageBlock title="List of Postions" >
+       <apex:inputtext id="searchTextBox" value="{!searchText}"/>
+                <!--<strong><apex:commandButton Id="btnSearch" action="{!search}" rerender="renderBlock" status="status" title="Search" value="Search" /></strong>-->
+                <apex:commandButton Id="btnSearch" action="{!search}" value="Search"/> 
+                    <!--{!positions}-->
+<apex:outputPanel id="renderBlock">
+    <apex:pageBlockTable value="{!Positions}" var="a">
+        <apex:column value="{!a.Name}"/> 
+        <apex:column value="{!a.Days_Open__c}"/>
+        <apex:column value="{!a.Hire_By__c}"/>
+        <apex:column value="{!a.Hiring_Manager__c}"/>
+    </apex:pageBlockTable>
+   </apex:outputPanel>
+        
+   </apex:pageBlock>
+</apex:form>  
+</apex:page>

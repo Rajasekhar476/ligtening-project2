@@ -1,0 +1,16 @@
+<apex:page standardController="Account" recordSetVar="Account">
+    <apex:form >
+        	<apex:sectionHeader title="Account " subtitle="Detials"/>
+        <apex:pageBlock >
+        	<apex:pageBlockTable value="{!Account}" var="acc">
+                <apex:column >
+                    <apex:facet name="Header">Action</apex:facet>
+                    <apex:commandLink value="edit" action="/{!acc.id}e?retURL={!acc.id}"/>
+                    <apex:facet name="Fotter">this is my fotter </apex:facet>
+                </apex:column>
+                <apex:column value="{!acc.name}" />
+                <apex:column value="{!acc.id}"/>
+        	</apex:pageBlockTable>
+        </apex:pageBlock> 
+    </apex:form>
+</apex:page>

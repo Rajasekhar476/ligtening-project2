@@ -1,0 +1,29 @@
+<apex:page sidebar="fasle" standardController="Account" recordSetVar="Account">
+<apex:form >
+            <apex:selectList size="1">
+                <apex:selectOptions value="{!listviewoptions}"></apex:selectOptions>
+                <apex:actionSupport event="onchange" rendered="pb"/>
+            </apex:selectList>
+            <apex:sectionHeader title="Accounts" subtitle="Home"/>
+               <apex:pageBlock >
+               <apex:pageBlockSection title="Recent Accounts">
+              <apex:pageBlockTable value="{!Account}" var="a">
+                <apex:column value="{!a.name}"/>
+                <apex:column value="{!a.id}"/>
+                <apex:column value="{!a.Industry}"/>
+                <apex:column value="{!a.Phone}"/>
+            </apex:pageBlockTable>
+            </apex:pageBlockSection>
+                    <apex:pageblockButtons location="top">
+                        <apex:commandButton value="New" action="{!Create}"/>
+                        <span style="float:right;">
+                            <apex:selectList size="1">
+                                <apex:selectOption itemLabel="Recent" itemvalue="one"/>
+                                <apex:selectoption itemLabel="Last" itemvalue="two"/>
+                           </apex:selectList>
+                         </span>
+                    </apex:pageblockButtons>
+   </apex:pageBlock>
+ </apex:form>
+  
+</apex:page>

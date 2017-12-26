@@ -1,0 +1,7 @@
+<apex:page >
+    <head>
+    <style>
+    body{font-family:Airal Unicode MS;}
+    </style>
+    </head>
+  </apex:page>

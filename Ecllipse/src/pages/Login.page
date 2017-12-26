@@ -1,0 +1,48 @@
+<apex:page sidebar="false" showHeader="false" controller="LoginClass"   >
+<body width="1000px" length="1000px" />
+<!-- Javascript -->
+    <script type="text/javascript">
+
+    function validate()
+    {
+        if(document.getElementById('{!$Component.frm.pb.pbs.pbsi1.nam}').value == '')
+        {
+            alert("User name is mandatory");
+        }
+        if(document.getElementById('{!$Component.frm.pb.pbs.pbsi2.pid}').value == '')
+        {
+            alert("Password id is mandatory");
+        }
+        else
+        {
+            callSubmt();
+            alert("Account has been inserted");
+        }
+    }
+    
+    </script>
+<!-- Javascript -->
+
+  <apex:form >
+              Name:<apex:outputText >id</apex:outputText>
+      <apex:actionFunction action="{!Login}" name="Call Submit"/>
+      <center>
+          <apex:panelGrid columns="2" border="2" title="Log In" >
+          <apex:pageBlock tabStyle="Candidate__C">
+              <apex:pageBlockSection title="Login" collapsible="false" onmouseover="Login" >
+                <apex:pageBlockSectionItem ><apex:outputLabel value="User Name "/></apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem ><apex:inputText value="{!Username}" id="nam"/></apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem ><apex:outputLabel value="Password "/></apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem ><apex:inputSecret value="{!Pwd}" id="pid"/></apex:pageBlockSectionItem>
+                <center>
+                <apex:commandButton value="Sign in" action="{!Signin}"/> &nbsp;&nbsp;
+                <apex:commandButton value="Cancel" action="{!Cancel}"/><br/>
+                <apex:commandLink value="Forget Password" action="{!doForget}"/><br/>
+                <apex:commandLink value="Create NewCanddate"  action="{!NewCandidate}"/>
+                </center>
+          </apex:pageBlockSection>
+      </apex:pageBlock>
+      </apex:panelGrid>
+      </center>
+  </apex:form>
+</apex:page>

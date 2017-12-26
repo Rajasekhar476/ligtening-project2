@@ -1,0 +1,15 @@
+<apex:page controller="opportunityList2Con">
+2
+    <apex:pageBlock >
+3
+        <apex:pageBlockTable value="{!opportunities}" var="o">
+4
+            <apex:column value="{!o.Name}"/>
+5
+            <apex:column value="{!o.CloseDate}"/>
+6
+        </apex:pageBlockTable>
+7
+    </apex:pageBlock>
+8
+</apex:page>

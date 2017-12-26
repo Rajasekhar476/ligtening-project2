@@ -1,0 +1,20 @@
+<apex:page sidebar="false" showHeader="False" StandardController="Lead"  renderAs="pdf">
+  <body>
+  {!Lead.Name}
+  </body>
+  <Center width="100">
+  
+  </Center>
+  <apex:form >
+  <apex:SectionHeader title="LEAD CONVERSTION" />
+  <apex:pageBlock >
+      
+      <apex:PageBlockSection title="Please Fill the Lead Form"/>
+      
+      <apex:outputLabel >{!Lead.Name}</apex:outputLabel>
+      <apex:outputField value="{!Lead.LastName}"/>
+      
+  </apex:pageBlock>
+ 
+ </apex:form> 
+</apex:page>

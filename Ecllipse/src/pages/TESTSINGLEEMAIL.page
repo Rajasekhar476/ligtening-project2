@@ -1,0 +1,5 @@
+<apex:page controller="EmailServices" >
+    <apex:form >
+        <apex:commandButton value="Email" action="{!show}"/>
+   </apex:form>
+  </apex:page>

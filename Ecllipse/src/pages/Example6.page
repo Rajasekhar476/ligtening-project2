@@ -1,0 +1,7 @@
+<apex:page controller="Example">
+<apex:form >
+<apex:outputPanel > your name is </apex:outputPanel>
+ <br/>
+<apex:outputText value="{!name}"/>
+</apex:form>
+</apex:page>

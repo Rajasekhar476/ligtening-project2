@@ -1,0 +1,17 @@
+<apex:page standardController="Account" recordSetVar="items" >
+  
+      <apex:sectionHeader title="Account" subtitle="Home" />
+      <apex:pageBlock >
+        you are looking for at some related lists for  {!account.Name};   
+        <apex:pageBlockTable value="{!items}" var="a">
+        <apex:column value="{!a.Name}"/>
+        <apex:column value="{!a.Industry}"/>
+        </apex:pageBlockTable>     
+      </apex:pageBlock>
+      
+       <apex:relatedList list="Contacts">
+       <apex:facet name="header">
+       </apex:facet>
+       <apex:relatedList list="OpenActivities"/>
+       </apex:relatedList>
+  </apex:page>

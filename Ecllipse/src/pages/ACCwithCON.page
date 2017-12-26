@@ -1,0 +1,32 @@
+<apex:page standardcontroller="Account" recordsetvar="items">
+           <apex:sectionHeader title="Account" subtitle="New Account"                                                                                                                                                       help="http:/www.google.com"/>
+            <apex:form >
+            <apex:outputlabel >view</apex:outputlabel>
+            <apex:selectList size="1" value="{!filterid}">
+            <apex:selectOptions value="{!listviewoptions}"/>
+            <apex:actionsupport event="onchange" rerender="pb"/>
+            </apex:selectList>
+             <apex:pageblock title="Recent Accounts" id="pb">
+             <apex:pageblockbuttons location="top">
+             <apex:commandButton value="new" action="{!create}"/>
+             <span style="float:right;">
+              <apex:selectlist size="1">
+                       <apex:selectoption itemlabel="Recently Viewed" itemvalue="one"/>
+                       <apex:selectoption itemlabel="Recently Modified" itemvalue="two"/>
+                       <apex:selectoption itemlabel="Recently Created" itemvalue="Three"/>
+                </apex:selectlist>
+                </span>
+               </apex:pageblockbuttons>
+              <apex:pageblocktable value="{!items}" var="a" rows="5">
+                    <apex:column value="{!a.name}"/>
+                     <apex:column value="{!a.industry}"/>
+                     <apex:column >
+                <apex:pageblocktable value="{!a.contacts}" var="b">
+                 <apex:column value="{!b.Firstname}"/>
+                 <apex:column value="{!b.Friends__c}"/>
+                </apex:pageblocktable>
+                </apex:column>
+                </apex:pageblocktable>
+                 </apex:pageblock>
+                 </apex:form>
+                 </apex:page>
